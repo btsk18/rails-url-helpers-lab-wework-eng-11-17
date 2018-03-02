@@ -4,7 +4,7 @@ Rails.application.routes.draw do
   # This show route can be refactored into the above resources method call, like so:
   resources :students, only: [:index, :show] do
   member do
-    get 'preview'
+    get 'activate'
   end
 end
   # However, for the sake of this lab and seeing how you can pass params through
