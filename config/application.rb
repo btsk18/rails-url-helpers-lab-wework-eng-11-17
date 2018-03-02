@@ -16,11 +16,6 @@ require "sprockets/railtie"
 # you've limited to :test, :development, or :production.
 Bundler.require(*Rails.groups)
 
-# console do
-#
-#   config.console = Pry
-# end
-
 module Arlab
   class Application < Rails::Application
     # Settings in config/environments/* take precedence over those specified here.
@@ -37,5 +32,9 @@ module Arlab
 
     # Do not swallow errors in after_commit/after_rollback callbacks.
     config.active_record.raise_in_transactional_callbacks = true
+    console do
+      require "pry"
+      config.console = Pry
+    end
   end
 end
