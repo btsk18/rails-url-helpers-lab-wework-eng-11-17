@@ -1,6 +1,7 @@
 require File.expand_path('../boot', __FILE__)
 
 require "rails"
+require "pry"
 # Pick the frameworks you want:
 require "active_model/railtie"
 require "active_job/railtie"
@@ -15,10 +16,10 @@ require "sprockets/railtie"
 # you've limited to :test, :development, or :production.
 Bundler.require(*Rails.groups)
 
-console do
-  require "pry"
-  config.console = Pry
-end
+# console do
+#
+#   config.console = Pry
+# end
 
 module Arlab
   class Application < Rails::Application
